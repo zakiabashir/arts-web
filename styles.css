@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20%;
+    background-color: rgb(154, 154, 113);
+    box-shadow: 20px 20px 20px rgb(61, 61, 7);
+}
+
+.profile-pic {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    border-radius: 50%;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #7d5d5d;
+    overflow: hidden;
+}
+nav .logo img {
+    
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transform: perspective(100px) rotateX(20deg) rotateY(0deg);
+}
+
+nav .logo {
+    float: left;
+    color: rgba(211, 237, 13, 0.862);
+    font-size: 32px;
+    padding: 14px 20px;
+    text-transform: uppercase;
+}
+
+nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .nav-links li {
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li a {
+    display: block;
+    font-size: 22px;
+    padding: 24px 20px;
+    color: white;
+    text-decoration:none;
+    text-align: center;
+}
+
+nav .nav-links li a:hover {
+    background-color: #575757;
+}
+
+/* Burger Menu Styles */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Section Styles */
+.section {
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: rgb(16, 8, 8);
+    text-align: center;
+}
+
+#home {
+    background-image: url('image/awesome-pic-natureza-600nw-2408133899.webp');
+}
+
+#movies {
+    background-image: url('image/landscap.jpg');
+}
+
+#cinema, #dvd, #music, #theater, #listings, #reviews {
+    background-image: url('image/sunrise.jpg');
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    nav .nav-links li {
+        text-align: center;
+    }
+
+    nav .nav-links li a {
+        padding: 10px;
+        border-bottom: 1px solid #575757;
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        top: 14px;
+        right: 20px;
+    }
+}
+
+.nav-active {
+    display: flex;
+}
